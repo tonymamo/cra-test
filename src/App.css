@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid #dddddd;
+  margin-right: 16px;
+}
