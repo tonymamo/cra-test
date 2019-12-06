@@ -10,11 +10,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {
-          data.map((person) => (
-            <Profile imageSource={person.imgPath} first={person.firstName} last={person.lastName} />
-          ))
-        }
+        <div className="profiles">
+          {
+            data.map((person) => (
+              <Profile person={person} key={person.userName} />
+            ))
+          }
+        </div>
       </header>
     </div>
   );
