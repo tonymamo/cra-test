@@ -3,6 +3,7 @@
 }
 
 .profile-wrapper {
+  flex: 1;
   background: white;
   border-radius: 8px;
   margin: 16px;
@@ -25,8 +26,9 @@
 }
 
 .profile-heading {
-  margin: 0;
+  margin: 0 0 16px;
   font-size: 32px;
+  text-align: center;
 }
 
 .profile-repo-link {
