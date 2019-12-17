@@ -1,4 +1,5 @@
 .profiles {
+  /* hint: this will need to change */
   display: flex;
 }
 
@@ -39,4 +40,10 @@
 .profile-repo-link:hover {
   color: #004e4e;
   text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .profiles {
+    /* write css code to here make the profiles in a single row */
+  }
 }
