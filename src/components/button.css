@@ -1,0 +1,15 @@
+.button {
+  background-color: #666;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.button-teal {
+  background-color: teal;
+}
+
+.button-red {
+  background-color: indianred;
+}

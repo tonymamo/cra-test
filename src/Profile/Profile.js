@@ -1,5 +1,6 @@
 import React from 'react';
 import './profile.css';
+import Button from '../components/Button';
 
 const createName = (person) => {
   return `${person.firstName} ${person.lastName}`;
@@ -10,7 +11,12 @@ const Profile = ({ person }) => (
     <div className="profile-header">
       <img className="profile-pic" src={person.imgPath} alt="profile pic" />
       <h1 className="profile-heading">{createName(person)}</h1>
-      <p><a href={`https://github.com/${person.userName}`}>{`@${person.userName}`}</a></p>
+      <Button
+        link={`https://github.com/${person.userName}`}
+        color="red"
+      >
+        {`@${person.userName}`}
+      </Button>
     </div>
     <ol className="profile-repositories">
       {

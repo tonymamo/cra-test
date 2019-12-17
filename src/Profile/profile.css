@@ -31,4 +31,10 @@
 
 .profile-repo-link {
   color: teal;
+  text-decoration: none;
+}
+
+.profile-repo-link:hover {
+  color: #004e4e;
+  text-decoration: underline;
 }
