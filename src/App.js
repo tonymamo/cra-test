@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Profile from './Profile';
+import Profile from './Profile/Profile';
 
 import data from './data.json';
 
