@@ -14,7 +14,9 @@ const Profile = ({ person }) => (
       <Heading>{createName(person)}</Heading>
       <Button
         link={`https://github.com/${person.userName}`}
+        size="small"
         color="teal"
+        disabled
       >
         {`@${person.userName}`}
       </Button>
