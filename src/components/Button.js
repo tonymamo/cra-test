@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+// we are applying styling (aka css) to an html <a> element
+const StyledButton = styled.a`
   color: white;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 6px;
-
   background-color: ${props => props.color ? props.color : '#dddddd'};
 
   ${props => props.size === 'large' && `padding: 16px 32px;border-radius: 32px;`};

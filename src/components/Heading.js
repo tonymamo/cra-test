@@ -1,8 +1,14 @@
 import React from 'react';
-import './heading.css';
+import styled from 'styled-components';
 
-const Heading = ({ children }) => (
-  <h1 className="heading">{children}</h1>
+const StyledH1 = styled.h1`
+  color: ${props => props.color ? props.color : 'indianred'};
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+`;
+
+const Heading = ({ children, color }) => (
+  <StyledH1 color={color}>{children}</StyledH1>
 );
 
 export default Heading;
