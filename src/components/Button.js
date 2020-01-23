@@ -7,6 +7,7 @@ const StyledButton = styled.a`
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 6px;
+  cursor: pointer;
   background-color: ${props => props.color ? props.color : '#dddddd'};
 
   ${props => props.size === 'large' && `padding: 16px 32px;border-radius: 32px;`};
@@ -16,6 +17,11 @@ const StyledButton = styled.a`
   width: ${props => props.block ? '100%' : 'initial'};
 
   ${props => props.disabled && `opacity: .1; cursor: not-allowed`}
+  
+  &:hover {
+    filter: brightness(115%);
+  }
+  
 `;
 
 const Button = ({ children, color, size, block, disabled, onClick }) => (

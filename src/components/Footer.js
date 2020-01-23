@@ -1,13 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { brandPrimary, white } from '../colors';
+import { baseSpacer, doubleSpacer} from '../sizes';
+
 const StyledFooter = styled.footer`
-  // do your css in here
+  background-color: ${brandPrimary};
+  padding: ${baseSpacer};
+  color: ${white};
+  margin-top: ${baseSpacer};
+  width: calc(100% - ${doubleSpacer});
 `;
 
 const Footer = () => (
   <StyledFooter>
-    footer goes here
+    &copy; { new Date().getFullYear() }
   </StyledFooter>
 );
 
