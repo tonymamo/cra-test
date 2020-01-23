@@ -14,7 +14,8 @@ import Login from './views/Login';
 import Home from './views/Home';
 import UserProfile from './views/UserProfile';
 
-import {lightGrey, textGrey } from './colors';
+import {lightGrey, textGrey, brandDanger } from './colors';
+import Heading from './components/Heading';
 
 const StyledBody = styled.div`
   background-color: ${lightGrey};
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route path="/" exact>
               <Login />
+            </Route>
+            <Route>
+              <Heading color={brandDanger}>Oops! Page not found</Heading>
             </Route>
           </Switch>
         <Footer />
