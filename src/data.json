@@ -40,31 +40,44 @@
     "firstName": "Tony",
     "lastName": "Mamo",
     "userName": "tonymamo",
+    "location": "Plymouth, MI",
+    "email": "tmamo13991@gmail.com",
+    "website": "tonymamo.com",
     "repositories": [
       {
         "url": "https://github.com/tonymamo/cra-test",
         "name": "cra-test",
-        "stars": 5
+        "stars": 5,
+        "type": "Javascript",
+        "lastUpdated": "yesterday"
       },
       {
         "url": "https://github.com/tonymamo/minesweeper",
         "name": "minesweeper",
-        "stars": 6
+        "stars": 6,
+        "type": "Javascript",
+        "lastUpdated": "yesterday"
       },
       {
         "url": "https://github.com/tonymamo/next-redux-wrapper",
         "name": "next-redux-wrapper",
-        "stars": 7
+        "stars": 7,
+        "type": "Javascript",
+        "lastUpdated": "yesterday"
       },
       {
         "url": "https://github.com/tonymamo/react-test",
         "name": "react-test",
-        "stars": 8
+        "stars": 8,
+        "type": "Javascript",
+        "lastUpdated": "yesterday"
       },
       {
         "url": "https://github.com/tonymamo/githubNotetaker",
         "name": "githubNotetaker",
-        "stars": 9
+        "stars": 9,
+        "type": "Javascript",
+        "lastUpdated": "yesterday"
       }
     ]
   }

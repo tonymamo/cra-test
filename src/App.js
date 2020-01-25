@@ -14,8 +14,10 @@ import Login from './views/Login';
 import Home from './views/Home';
 import UserProfile from './views/UserProfile';
 
-import {lightGrey, textGrey, brandDanger } from './colors';
+import { lightGrey, textGrey, brandDanger } from './colors';
 import Heading from './components/Heading';
+
+import data from './data.json';
 
 const StyledBody = styled.div`
   background-color: ${lightGrey};
@@ -37,7 +39,7 @@ function App() {
               <Home />
             </Route>
             <Route path="/user/:userName">
-              <UserProfile />
+              <UserProfile data={data} />
             </Route>
             <Route path="/user">
               <Redirect to="/" />
