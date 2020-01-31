@@ -38,5 +38,3 @@ function Home() {
 }
 
 export default withRouter(Home);
-
-

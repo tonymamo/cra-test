@@ -9,13 +9,15 @@ import {
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Heading from './components/Heading';
 
 import Login from './views/Login';
 import Home from './views/Home';
 import UserProfile from './views/UserProfile';
+import Contact from './views/Contact';
+import About from './views/About';
 
 import { lightGrey, textGrey, brandDanger } from './colors';
-import Heading from './components/Heading';
 
 import data from './data.json';
 
@@ -37,6 +39,12 @@ function App() {
           <Switch>
             <Route path="/home" exact>
               <Home />
+            </Route>
+            <Route path="/contact" exact>
+              <Contact />
+            </Route>
+            <Route path="/about" exact>
+              <About />
             </Route>
             <Route path="/user/:userName">
               <UserProfile data={data} />
