@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { brandPrimary, white } from '../colors';
-import { baseSpacer, doubleSpacer } from '../sizes';
+import { halfSpacer, doubleSpacer, baseSpacer } from '../sizes';
 import logo from '../logo.svg';
+import Container from './Container';
 
 const StyledLogo = styled.img`
   width: ${doubleSpacer};
@@ -15,18 +16,21 @@ const StyledLogo = styled.img`
 `;
 
 const StyledNavbar = styled.div`
-  padding: ${baseSpacer};
+  padding: ${halfSpacer} 0;
   background-color: ${brandPrimary};
   color: ${white};
   position: sticky;
-  width: calc(100% - ${doubleSpacer});
+  width: 100%;
+  margin-bottom: ${baseSpacer};
 `;
 
 const Navbar = () => (
   <StyledNavbar>
-    <Link to="/">
-      <StyledLogo src={logo} alt="logo" />
-    </Link>
+    <Container>
+      <Link to="/">
+        <StyledLogo src={logo} alt="logo" />
+      </Link>
+    </Container>
   </StyledNavbar>
 );
 

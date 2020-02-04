@@ -4,4 +4,10 @@ export const baseSpacer = '16px';
 export const doubleSpacer = '32px';
 export const quadrupleSpacer = '64px';
 
-export const asdfasf = '6px';
+export const breakpoints = {
+  xs: '0rem',
+  sm: '32rem',
+  md: '48rem',
+  lg: '64rem',
+  xl: '75rem',
+};

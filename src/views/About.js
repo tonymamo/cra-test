@@ -5,7 +5,7 @@ import Heading from '../components/Heading';
 const About = () => (
   <div>
     <Heading>About</Heading>
-    <p>...</p>
+    <p>My favorite thing is...</p>
   </div>
 );
 

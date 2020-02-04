@@ -8,13 +8,14 @@ import Heading from '../components/Heading';
 import { brandPrimary, white, midGrey, brandSecondary } from '../colors';
 
 const StyledProfileWrapper = styled.div`
-  flex: 1;
   background: ${white};
   border: 1px solid ${midGrey};
   border-radius: 8px;
-  margin: 16px;
   color: #666;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const StyledProfileHeader = styled.div`

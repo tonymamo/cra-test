@@ -10,6 +10,7 @@ import {
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Heading from './components/Heading';
+import Container from './components/Container';
 
 import Login from './views/Login';
 import Home from './views/Home';
@@ -36,6 +37,7 @@ function App() {
     <Router>
       <StyledBody>
         <Navbar />
+        <Container>
           <Switch>
             <Route path="/home" exact>
               <Home />
@@ -59,6 +61,7 @@ function App() {
               <Heading color={brandDanger}>Oops! Page not found</Heading>
             </Route>
           </Switch>
+        </Container>
         <Footer />
       </StyledBody>
     </Router>
