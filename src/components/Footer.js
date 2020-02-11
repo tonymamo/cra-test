@@ -17,7 +17,13 @@ const StyledFooter = styled.footer`
 const Footer = () => (
   <StyledFooter>
     <Container>
-      &copy; { new Date().getFullYear() } <Link to="/about">About</Link> <Link to="/contact">Contact Us</Link>
+      &copy; { new Date().getFullYear() }
+      {' '}
+      <Link to="/about">About</Link>
+      {' '}
+      <Link to="/contact">Contact Us</Link>
+      {' '}
+      <Link to="/grid">Grid</Link>
     </Container>
   </StyledFooter>
 );

@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components';
 
-import { halfSpacer, baseSpacer, breakpoints } from '../sizes';
+import { halfSpacer, breakpoints } from '../sizes';
 
 function createColumnSpan(breakpoint: number) {
   const width = (breakpoint / 12) * 100;
@@ -17,7 +17,6 @@ const Column = styled.div`
   padding-right: ${halfSpacer};
   padding-left: ${halfSpacer};
   flex: 0 0 auto;
-  margin-bottom: ${baseSpacer};
   
   ${(props: Props) => (props.xs ? createColumnSpan(props.xs) : 'width: 100%')};
 

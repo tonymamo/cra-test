@@ -17,6 +17,7 @@ import Home from './views/Home';
 import UserProfile from './views/UserProfile';
 import Contact from './views/Contact';
 import About from './views/About';
+import Grid from './views/Grid';
 
 import { lightGrey, textGrey, brandDanger } from './colors';
 
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/about" exact>
               <About />
+            </Route>
+            <Route path="/grid" exact>
+              <Grid />
             </Route>
             <Route path="/user/:userName">
               <UserProfile data={data} />
