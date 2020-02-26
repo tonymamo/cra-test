@@ -1,39 +1,14 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import styled from 'styled-components';
 
 import Heading from '../components/Heading';
 import Button from '../components/Button';
-import { brandPrimary, brandSecondary, textGrey, white, lightGrey, brandPrimaryRGB} from '../colors';
-import { doubleSpacer, baseSpacer, quarterSpacer } from '../sizes';
+import Input from '../components/Input';
+import Row from '../components/Row';
+import Column from '../components/Column';
+import Box from '../components/Box';
 
-const StyledLoginWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledInput = styled.input`
-  display: block;
-  width: 300px;
-  height: ${doubleSpacer};
-  padding: ${baseSpacer};
-  font-size: ${baseSpacer};
-  color: ${textGrey};
-  background-color: ${white};
-  background-image: none;
-  border: 1px solid ${lightGrey};
-  border-radius: ${quarterSpacer};
-  transition: border-color .2s ease-in-out;
-  margin-bottom: ${baseSpacer};
-    
-  &:focus {
-    border-color: ${brandPrimary};
-    outline: 0;
-    box-shadow: 0 0 0 ${quarterSpacer} rgba(${brandPrimaryRGB},.25);
-  }
-`;
+import { brandPrimary, brandSecondary } from '../colors';
 
 class Login extends Component {
   state = {
@@ -51,13 +26,22 @@ class Login extends Component {
       return <Redirect to="/home" />
     }
     return (
-      <StyledLoginWrapper>
-        <Heading color={brandPrimary}>Welcome</Heading>
-        <Heading color={brandSecondary}>My First React App</Heading>
-        <StyledInput type="text" />
-        <StyledInput type="password" />
-        <Button size="large" color={brandPrimary} onClick={() => this.login()}>Login</Button>
-      </StyledLoginWrapper>
+      <div>
+        <Row>
+          <Column md={4}></Column>
+          <Column md={4}>
+            <Box textAlign="center">
+              <Heading color={brandPrimary}>Welcome</Heading>
+              <Heading color={brandSecondary}>My First React App</Heading>
+              <Input type="text" />
+              <Input type="password" />
+              <p>
+                <Button size="large" color={brandPrimary} onClick={() => this.login()}>Login</Button>
+              </p>
+            </Box>
+          </Column>
+        </Row>
+      </div>
     );
   }
 }

@@ -5,21 +5,13 @@ import styled from 'styled-components';
 import Heading from '../components/Heading';
 import Row from '../components/Row';
 import Column from '../components/Column';
+import Box from '../components/Box';
 
-import { halfSpacer, baseSpacer, quadrupleSpacer } from '../sizes';
-import { white, midGrey } from '../colors';
+import { quadrupleSpacer } from '../sizes';
 
 const Avatar = styled.img`
   width: ${quadrupleSpacer};
   border-radius: ${quadrupleSpacer};
-`;
-
-const StyledRepoBox = styled.div`
-  background-color: ${white};
-  border: 1px solid ${midGrey};
-  margin-bottom: ${baseSpacer};
-  padding: ${baseSpacer};
-  border-radius: ${halfSpacer};
 `;
 
 function UserProfile(props) {
@@ -45,21 +37,25 @@ function UserProfile(props) {
         </Column>
         <Column md={8}>
           <Heading>Repositories</Heading>
+          <Row>
           {
             user.repositories.map((repo) => (
-              <StyledRepoBox key={repo.url}>
-                <Row>
-                  <Column sm={9}>
-                    <p><a href={repo.url}>{repo.name}</a></p>
-                    <p>{repo.type} - {repo.lastUpdated}</p>
-                  </Column>
-                  <Column sm={3}>
-                    <p>{repo.stars} stars</p>
-                  </Column>
-                </Row>
-              </StyledRepoBox>
+              <Column key={repo.url} xl={6}>
+                <Box>
+                  <Row>
+                    <Column sm={9}>
+                      <p><a href={repo.url}>{repo.name}</a></p>
+                      <p>{repo.type} - {repo.lastUpdated}</p>
+                    </Column>
+                    <Column sm={3}>
+                      <p>{repo.stars} stars</p>
+                    </Column>
+                  </Row>
+                </Box>
+              </Column>
             ))
           }
+          </Row>
         </Column>
       </Row>
     </div>

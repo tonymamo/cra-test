@@ -4,19 +4,9 @@ import { Link } from 'react-router-dom';
 
 import Button from '../components/Button';
 import Heading from '../components/Heading';
+import Box from '../components/Box';
 
-import { brandPrimary, white, midGrey, brandSecondary } from '../colors';
-
-const StyledProfileWrapper = styled.div`
-  background: ${white};
-  border: 1px solid ${midGrey};
-  border-radius: 8px;
-  color: #666;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
+import { brandPrimary, brandSecondary } from '../colors';
 
 const StyledProfileHeader = styled.div`
   display: flex;
@@ -56,7 +46,7 @@ const visitGithub = (person) => {
 }
 
 const Profile = ({ person }) => (
-  <StyledProfileWrapper>
+  <Box>
     <StyledProfileHeader>
       <StyledProfilePic className="profile-pic" src={person.imgPath} alt="profile pic" />
       <Link to={`/user/${person.userName}`}><Heading color={brandSecondary}>{createName(person)}</Heading></Link>
@@ -78,7 +68,7 @@ const Profile = ({ person }) => (
         ))
       }
     </StyledProfileRepos>
-  </StyledProfileWrapper>
+  </Box>
 );
 
 export default Profile;

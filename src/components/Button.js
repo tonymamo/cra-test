@@ -1,15 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { brandPrimary } from '../colors';
+
 // we are applying styling (aka css) to an html <a> element
 const StyledButton = styled.a`
   color: white;
   text-decoration: none;
+  text-align: center;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  background-color: ${props => props.color ? props.color : '#dddddd'};
-
+  background-color: ${props => props.color ? props.color : brandPrimary};
+  display: inline-block;
+  
   ${props => props.size === 'large' && `padding: 16px 32px;border-radius: 32px;`};
 
   ${props => props.size === 'small' && `padding: 4px;border-radius: 2px;`};
