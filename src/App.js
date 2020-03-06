@@ -54,7 +54,7 @@ function App() {
               <Grid />
             </Route>
             <Route path="/state" exact>
-              <StateExample />
+              <StateExample people={data.map((person) => person.firstName)} />
             </Route>
             <Route path="/user/:userName">
               <UserProfile data={data} />
